@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: fonte1;
+    src: url(fonte/Techfont.ttf);
+}
+
+@font-face {
+    font-family: fonte2;
+    src: url(fonte/kenyan\ coffee\ bd.otf);
+}
+
+@font-face {
+    font-family: fonte3;
+    src: url(fonte/steelfish\ bd\ it.otf);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #000304;
+}
+
+.botao li{
+    display: inline-block;
+    /* margin: 10px; */
+    background-color: #f1cc24;
+    border-radius: 3px;
+    padding: 1.5em;
+    margin: 60px;
+}
+
+.botao li a{
+    text-decoration: none;
+    color: black;
+    font-family: fonte1;
+    
+}
+
+.botao input{
+    display: inline-block;
+    padding: 2em;
+    /* margin: 3em; */
+    font-family: fonte1;
+    border-radius: 3px;
+}
+
+
+.botao li:hover{
+    filter: opacity(20%);
+    
+}
+
+/* --------------------INICIO PARALLLAX ---------------*/
+h1, h3{
+    text-align: center;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    font-family: fonte1;
+    font-size: 2em;
+    
+
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background-color:  rgb(201, 199, 199);
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
+section.modulo p{
+    margin-bottom: 3em;
+    text-align: justify;
+    font-size: 2em;
+    font-family: fonte2;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+
+}
+
+section.modulo h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: fonte1;
+    color: aliceblue;
+    box-shadow: 5px 3px 4px rgb(255, 255, 255);
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background-color: rgb(4, 133, 133);
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+
+section.modulo.parallax h1{
+    color:rgb(255, 255, 255) ;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    z-index: 50;
+    font-family: fonte1;
+    text-shadow: 4px 4px 2px rgb(0, 0, 0);
+    
+}
+
+section.modulo.parallax h2{
+    color:rgb(255, 255, 255) ;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    z-index: 50;
+    font-family: fonte1;
+    text-shadow: 4px 5px 2px rgb(0, 0, 0);
+
+}
+
+
+section.modulo.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 50%, rgb(4, 133, 133));
+}
+
+
+section.modulo.parallax-1{
+    background-image: url(https://www.programaria.org/wp-content/uploads/2016/06/html.jpg);
+}
+
+section.modulo.parallax-2{
+    background-image: url(https://blog.bighouseweb.com.br/wp-content/uploads/2022/01/Linguagens-de-programacao-1140x660.jpg);
+}
+
+/*  ------------FIM PARALLAX-------------- */
+
+/* -----------COMEÇO CARD */
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    background-color: rgb(4, 133, 133) ;
+}
+
+img{
+    margin: 2em;
+    width: 80%;
+}
+
+.card h3{
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.card p{
+    margin: 2em;
+    font-size: 2em;
+    font-family: fonte3;
+    color: rgb(226, 174, 4);
+    text-shadow: 2px 2px 2px black;
+} 
+.card img{
+    height: 350px;
+}
+
+.card:nth-child(even) img{
+    order: 2;
+}
+
+/* -------------FINAL CARD--------- */
+
+/* VIDEO */
+
+.video{
+    text-align: center;
+    background-color: rgb(216, 166, 1) ;
+    border-radius: 2em;
+    box-shadow: 5px 5px 5px 5px black;
+}
+/* ---------COMEÇO FOOTER--------- */
+
+
+
+/* FIM DO FOOTER--------- */
+
+footer{
+    margin-top: 4em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 2em;
+    font-family: fonte3;
+    color: white;
+    /* background-color: black; */
+    box-shadow: 5px 5px 35px 3px rgb(255, 255, 255);
+    
+}
+
+
+
+/* RESPONDIVIDADE */
+
+@media all and (max-width:860px){
+   /* PARALLAX */
+   
+   .botao li{
+    display: inline-block;
+    margin: 10px;
+    background-color: #f1cc24;
+    border-radius: 3px;
+    padding: 1.5em;
+    width: 30%;
+    /* margin: 60px; */
+}
+
+
+.botao input{
+    /* display: inline-block; */
+    /* padding: 2em; */
+    /* margin: 3em; */
+    font-family: fonte1;
+    border-radius: 3px;
+    width: 40%;
+}
+
+
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h1, h3{
+        text-align: center;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+        font-family: fonte1;
+        /* font-size: 2em; */
+        padding-right: 10px;
+    
+    }
+
+    section.modulo p{
+        margin-bottom: 3em;
+        /* text-align: justify; */
+        font-size: 2em;
+        text-align: center;
+        padding-right: 30px;
+        font-family: fonte2;
+        color: white;
+        text-shadow: 2px 2px 3px black;
+    
+    }
+    
+    section.modulo h2{
+        margin-bottom: 30px;
+        /* font-size: 30px; */
+        text-transform: uppercase;
+        text-align: center;
+        font-family: fonte1;
+        color: rgb(255, 255, 255);
+        box-shadow: 5px 3px 4px rgb(255, 255, 255);
+    }
+
+
+    /* CARD */
+    .card{
+        /* display: grid; */
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* gap: 2em; */
+        display: inline;
+        margin-top: 5em;
+        margin-bottom: 3em;
+        background-color: rgb(255, 255, 255) ;
+    }
+
+    img{
+        /* margin: 2em; */
+        width: 85%;
+        
+        
+    }
+    
+    .card h3{
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+    
+    .card p{
+        margin: 2em;
+        font-size: 2em;
+        font-family: fonte3;
+        color: rgb(226, 174, 4);
+        text-shadow: 2px 2px 2px black;
+    } 
+    .card img{
+        height: 350px;
+    }
+
+    /* video */
+    iframe{
+        /* text-align: center; */
+        background-color:rgb(216, 166, 1) ;
+        /* border-radius: 2em; */
+        box-shadow: 5px 5px 5px 5px black;
+        width: 100%;
+    }
+
+}
